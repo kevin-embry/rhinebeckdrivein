@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>About Rhinebeck Drive-In Theater</title>
+        <link rel="stylesheet" href="ticketpurchase.css">
+
+        <script>
+            expireDate = new Date
+            expireDate.setMonth(expireDate.getMonth()+6)
+
+
+            function setCookie()
+            {
+                var name = document.getElementById("fname").value;
+                document.cookie = "firstname=" + name.replace(/[\r\n]+/g, '_') + "; expires=" + expireDate.toGMTString()
+                //alert(document.cookie);
+
+            }
+        </script>
+    </head>
+    <body>
+    <header>
+        <img src="images/headerImage2.jpg" alt="header" width="1000px" height="200px"/>
+    </header>
+    <nav class="menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="nowplaying.html">Now Playing</a></li>
+            <li><a href="comingsoon.html">Coming Soon</a></li>
+            <li><a href="#">Get Tickets</a></li>
+            <li><a href="snackbar.html">Snack Shop</a></li>
+            <li><a href="photos.html">Photos</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="top">
+            <h1 class="whitetext">Welcome to the <span id="new">NEW</span> Rhinebeck Masterpiece Drive-In</h1>
+            <h1 class="whitetext">Purchase Tickets In Advance</h1>
+            <img src="images/ticket.jpe" width="300px"/>
+            <h2>Regular Admission</h2>
+           <h2>Save time at the ticket booth</h2>
+            <h2>Purchase your tickets here!</h2>
+        </div>
+
+        <form name="ticketpurchase" action="ticketpurchase.asp" method="post">
+        <table class="ticket">
+            <tr>
+                <th style="width: 300px;"></th>
+                <th style="width: 100px;"></th>
+                <th style="width: 80px;"><h2>Qty</h2></th>
+                <th style="width: 50px;"><h2>Total</h2></th>
+            </tr>
+
+            <tr>
+                <th><h2>Adults</h2></th>
+                <th><h2>$10.00</h2></th>
+                <th><select name ="adult_qty" id="adult_qty" style="width: 50px;" onchange="total_adult()"/>
+                    <option value="0" selected></option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select></th>
+                <th><input type="textbox" name="adult_total" id="adult_total"/></th>
+            </tr>
+
+            <tr>
+                <th><h2>Children 6-12</h2></th>
+                <th><h2>$5.00</h2></th>
+                <th><select name="child_qty" id="child_qty" style="width: 50px;" onchange="total_child()">
+                    <option value="0" selected></option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select></th>
+                <th><input type="textbox" name="child_total" id="child_total"/></th>
+            </tr>
+
+            <tr>
+                <th><h2>Children 5 and Under</h2></th>
+                <th><h2>FREE</h2></th>
+                <th><select name="under5_qty" id="under5_qty" style="width: 50px;" onchange="total_under()">
+                    <option value="0" selected></option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select></th>
+                <th><input type="textbox" name="under5_total" id="under5_total"/></th>
+            </tr>
+
+            <tr>
+                <th></th>  <!--ONE COMPLETE ROW BLANK-->
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+
+            <tr>
+                <th></th>
+                <th></th>
+                <th><h3>Total:</h3></th>
+                <th><input type="textbox" name="grand_total" id="grand_total"/></th>
+            </tr>
+
+           <!-- <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>-->
+
+        </table>
+
+            <h1 style="vertical-align: top" class="top">Your information:</h1>
+            <table style="margin: auto; vertical-align: top;">
+                <tr>
+                    <th><label for="fname" class="whitetext">First Name:</label></th>
+                    <th><input type="text" id="fname" name="fname" cols="50" required/></th>
+                </tr>
+				
+				<tr>
+                    <th><label for="lname" class="whitetext">Last Name:</label></th>
+                    <th><input type="text" name="lname" cols="50" required/></th>
+                </tr>
+
+                <tr>
+                    <th><label for="phone" class="whitetext">Telephone #:</label></th>
+                    <th><input type="text" name="phone" cols="50" required/></th>
+                </tr>
+
+                <tr>
+                    <th></th>  <!--ONE COMPLETE ROW BLANK-->
+                    <th></th>
+
+                </tr>
+
+                <tr>
+                    <th></th>
+                    <th><input type="submit" name="submitbutton" value="PURCHASE" onclick="processform()"/></th>
+                </tr>
+
+            </table>
+
+        </form>
+
+
+
+    </main>
+        <footer id="foot">
+            <div id="container">
+                <img id="antipiracy" src="images/anti-piracy.gif" width="125px"/>
+                <a href="http://www.mpaa.org/why-copyright-matters/" target="_blank">Video recording devices are strictly prohibited. Click here for anti-piracy laws.</a>
+            </div>
+            <div id="address">
+                <p class="whitetext">Rhinebeck Masterpiece Drive-In</p>
+                <p class="whitetext">3392 North Albany Post Road</p>
+                <p class="whitetext">Rhinebeck, NY 12572</p>
+            </div>
+        </footer>
+
+    <script>
+        function total_adult()
+        {
+            var quantity;
+            var price = 10.00;
+            var total;
+
+            quantity = document.getElementById("adult_qty").value;
+            total = price * quantity;
+            document.getElementById("adult_total").value = total;
+            total_price();
+        }
+
+        function total_child()
+        {
+            var quantity;
+            var price = 5;
+            var total;
+            quantity = document.getElementById("child_qty").value;
+            total = price * quantity;
+            document.getElementById("child_total").value = total;
+            total_price();
+        }
+
+        function total_under()
+        {
+            var quantity;
+            var price = 0;
+            var total;
+            quantity = document.getElementById("under5_qty").value;
+            total = price * quantity;
+            document.getElementById("under5_total").value = total;
+            total_price();
+        }
+
+
+        function total_price()
+        {
+            var total;
+            var adult_total;
+            var child_total;
+
+
+            adult_total = document.getElementById("adult_total").value;
+            child_total = document.getElementById("child_total").value;
+
+
+            total = +adult_total + +child_total;
+            //total += child_total;
+            document.getElementById("grand_total").value = ("$" + total);
+        }
+
+        function processform()
+        {
+            setCookie();
+            window.alert("Thank you for your purchase. See you at the movies!");
+            document.getElementById("ticketpurchase").submit();
+
+
+        }
+
+
+    </script>
+    </body>
+    </html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rhinebeck Masterpiece Drive-In Theater</title>
+	<link rel="stylesheet" href="rhinebeckdrivein.css">
+</head>
+<body>
+	<header>
+		<img src="images/headerImage2.jpg" alt="header" width="1000px" height="200px"/>
+	</header>
+	
+<nav class="menu">
+	<ul>
+		<li><a href="#">Home</a></li>
+		<li><a href="nowplaying.html">Now Playing</a></li>
+		<li><a href="comingsoon.html">Coming Soon</a></li>
+		<li><a href="ticketpurchase.html">Get Tickets</a></li>
+		<li><a href="snackbar.html">Snack Shop</a></li>
+		<li><a href="photos.html">Photos</a></li>
+		<li><a href="aboutus.html">About Us</a></li>
+	</ul>
+</nav>
+
+<main>
+	<div class="top">
+		<h1 class="whitetext">Welcome to the <span id="new">NEW</span> Rhinebeck Masterpiece Drive-In</h1>
+		<h3 class="whitetext">This is our first season of great classic '80s era movies.</h3>
+		<h3 class="whitetext">Drive on in, Grab some popcorn, </h3>
+		<h3 class="whitetext">And enjoy the show!</h3>
+	</div>
+	
+	<div class="topleft">
+		<img style="margin-top: 68px" src="images/marquee_sign4.jpg" id="marquee1" width="350" height="270" alt="Marquee"/>
+		<h2 class="whitetext">Regular Admission</h2>
+		<h4 class="whitetext">$10 for Adults - $5 For Children under 12</h4>
+		<h4 class="whitetext">Children 5 and under FREE</h4>
+		<h4 class="whitetext">Ticket Booth Opens 1 hour before show</h4>
+		<h4 class="whitetext">Buy your tickets in advance by clicking <a style="color: yellow; text-decoration: none;" href="ticketpurchase.html">HERE</a></h4>
+	</div>
+	
+	<div class="topright">
+		<h2 class="whitetext">Now Showing 4/25 to 5/1</h2>
+		<iframe id="framea" width="500" height="270" src="https://www.youtube.com/embed/7RYpJAUMo2M" frameborder="0" allowfullscreen></iframe>
+		<h4 style="margin-top: 10px" class="whitetext">The original classic</h4>
+		<h4 class="whitetext">Rocky 1976</h4>
+		<iframe id="frameb" width="500" height="270" src="https://www.youtube.com/embed/vntAEVjPBzQ" frameborder="0" allowfullscreen></iframe>
+		<h4 style="margin-top: 10px" class="whitetext">Who you gonna call?</h4>
+		<h4 class="whitetext">Ghostbusters 1984</h4>
+	</div>
+
+	<div class="botleft">
+		<!--<a href="http://www.accuweather.com/en/us/rhinebeck-ny/12572/weather-forecast/339750" class="aw-widget-legal">
+
+		</a><div style="width: 125px; float: left;" id="awcc1461367438943" class="aw-widget-current"  data-locationkey="339750" data-unit="f" data-language="en-us" data-useip="false" data-uid="awcc1461367438943"></div><script type="text/javascript" src="http://oap.accuweather.com/launch.js"></script>-->
+		<image style="float: left" src="images/coolhotdog.jpg" width="140px"/>
+		<h3 class="whitetext">Visit our snack shop! <br/> Come to us for your popcorn, soda, snacks and goodies! The snack shop opens 30 minutes prior to show.</h3>
+		<h3 class="whitetext">Check out our snack menu! <a style="color: yellow; text-decoration: none;" href="snackbar.xml">CLICK HERE</a></h3>
+	</div>
+
+	<!--<div class="botright">
+	</div>-->
+
+
+</main>
+
+<footer id="foot">
+	<div id="container">
+		<img id="antipiracy" src="images/anti-piracy.gif" width="125px"/>
+		<a href="http://www.mpaa.org/why-copyright-matters/" target="_blank">Video recording devices are strictly prohibited. Click here for anti-piracy laws.</a>
+	</div>
+	<div id="address">
+		<p class="whitetext">Rhinebeck Masterpiece Drive-In</p>
+		<p class="whitetext">3392 North Albany Post Road</p>
+		<p class="whitetext">Rhinebeck, NY 12572</p>
+	</div>
+</footer>
+
+<script>
+	window.onload = getCookie;
+	function getCookie()
+	{
+	if (document.cookie !="")
+	{
+		var name = document.cookie.split("=")[1];
+		window.alert("Welcome back "+name);
+	}}
+</script>
+</body>
+</html>
+
+
+

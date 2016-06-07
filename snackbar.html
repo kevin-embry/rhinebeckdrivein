@@ -1,0 +1,297 @@
+ <!DOCTYPE html>
+ <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>About Rhinebeck Drive-In Theater</title>
+        <link rel="stylesheet" href="snackbar.css">
+    </head>
+    <body>
+    <header>
+        <img src="images/headerImage2.jpg" alt="header" width="1000px" height="200px"/>
+    </header>
+    <nav class="menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="nowplaying.html">Now Playing</a></li>
+            <li><a href="comingsoon.html">Coming Soon</a></li>
+            <li><a href="ticketpurchase.html">Get Tickets</a></li>
+            <li><a href="#">Snack Shop</a></li>
+            <li><a href="photos.html">Photos</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="top">
+            <h1 class="whitetext">Welcome to the <span id="new">NEW</span> Rhinebeck Masterpiece Drive-In</h1>
+            <h1 class="whitetext">Snack Bar Food & Merchandise</h1>
+            <img src="images/vintagesign.jpg" width="300px"/>
+        </div>
+        <form id="menuboard" action="snackbar.asp" method="post">
+            <h2 class="top">Any snack menu can be delivered to your car!</h2>
+            <h2 class="top">Simply fill out the form at the bottom.</h2>
+
+            <div id="menuleft">
+                <h1 style="text-align: center;">FOOD</h1>
+                <table class="food">
+                    <tr>
+                        <th></th>
+                        <th class="holder"></th>
+                        <th><h2>PRICE</h2></th>
+                        <th><h2>QTY</h2></th>
+                    </tr>
+                    <tr>
+                        <th><h2>Hamburger</h2></th>
+                        <th class="holder"></th>
+                        <th><h2>$6.00</h2></th>
+                        <th><select id="hamb_qty" name="hamb_qty" style="width: 40px;">
+                            <option value="" selected></option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select></th>
+                    </tr>
+
+                    <tr>
+                        <th><h2>Cheeseburger</h2></th>
+                        <th class="holder"></th>
+                        <th><h2>$6.50</h2></th>
+                        <th><select id="cheese_qty" name="cheese_qty" style="width: 40px;">
+                            <option value="" selected></option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select></th>
+                    </tr>
+
+                    <tr>
+                        <th><h2>Hot Dog</h2></th>
+                        <th class="holder"></th>
+                        <th><h2>$4.00</h2></th>
+                        <th><select id="hotdog_qty" name="hotdog_qty" style="width: 40px;">
+                            <option value="" selected></option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select></th>
+                    </tr>
+
+                    <tr>
+                        <th><h2>French Fries</h2></th>
+                        <th class="holder"></th>
+                        <th><h2>$3.00</h2></th>
+                        <th><select id="frenchfry_qty" name="frenchfry_qty" style="width: 40px;">
+                            <option value="" selected></option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select></th>
+                    </tr>
+
+                    <tr>
+                        <th><h2>Pretzel</h2></th>
+                        <th class="holder"></th>
+                        <th><h2>$3.00</h2></th>
+                        <th><select id="pretzel_qty" name="pretzel_qty" style="width: 40px;">
+                            <option value="" selected></option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select></th>
+                    </tr>
+
+                    <tr>
+                        <th><h2>6pc Chicken Nuggets</h2></th>
+                        <th class="holder"></th>
+                        <th><h2>$4.00</h2></th>
+                        <th><select id="nuggets_qty" name="nuggets_qty" style="width: 40px;">
+                            <option value="" selected></option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select></th>
+                    </tr>
+
+                    <tr>
+                        <th><h2>Pizza Slice</h2></th>
+                        <th class="holder"></th>
+                        <th><h2>$3.50</h2></th>
+                        <th><select id="pizza_qty" name="pizza_qty" style="width: 40px;">
+                            <option value="" selected></option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select></th>
+                    </tr>
+                </table>
+
+            </div>
+
+            <div id="menuright">
+                <h1 style="text-align: center;">DRINKS & POPCORN</h1>
+                <table class="food">
+                    <tr>
+                        <th></th>
+                        <th class="holder"></th>
+                        <th><h2>PRICE</h2></th>
+                        <th><h2>QTY</h2></th>
+                    </tr>
+                    <tr>
+                        <th><h2>Popcorn Large</h2></th>
+                        <th class="holder"></th>
+                        <th><h2>$6.00</h2></th>
+                        <th><select id="lg_popcorn_qty" name="lg_popcorn_qty" style="width: 40px;">
+                            <option value="" selected></option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select></th>
+                    </tr>
+
+                    <tr>
+                        <th><h2>Popcorn Med</h2></th>
+                        <th class="holder"></th>
+                        <th><h2>$5.00</h2></th>
+                        <th><select id="med_popcorn_qty" name="med_popcorn_qty" style="width: 40px;">
+                            <option value="" selected></option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select></th>
+                    </tr>
+
+                    <tr>
+                        <th><h2>Popcorn Small</h2></th>
+                        <th class="holder"></th>
+                        <th><h2>$4.00</h2></th>
+                        <th><select id="small_popcorn_qty" name="small_popcorn_qty" style="width: 40px;">
+                            <option value="" selected></option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select></th>
+                    </tr>
+
+                    <tr>
+                        <th><h2>Candy Bar</h2></th>
+                        <th class="holder"></th>
+                        <th><h2>$2.00</h2></th>
+                        <th><select id="candy_qty" name="candy_qty" style="width: 40px;">
+                            <option value="" selected></option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select></th>
+                    </tr>
+
+                    <tr>
+                        <th><h2>Fountain Soda</h2></th>
+                        <th class="holder"></th>
+                        <th><h2>$2.50</h2></th>
+                        <th><select id="fountain_qty" name="fountain_qty" style="width: 40px;">
+                            <option value="" selected></option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select></th>
+                    </tr>
+
+                    <tr>
+                        <th><h2>Bottled Water</h2></th>
+                        <th class="holder"></th>
+                        <th><h2>$3.00</h2></th>
+                        <th><select id="bot_water_qty" name="bot_water_qty" style="width: 40px;">
+                            <option value="" selected></option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select></th>
+                    </tr>
+
+                    <tr>
+                        <th><h2>Bottled Soda</h2></th>
+                        <th class="holder" ></th>
+                        <th><h2>$3.00</h2></th>
+                        <th><select id="bot_soda_qty" name="bot_soda_qty" style="width: 40px;">
+                            <option value="" selected></option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select></th>
+                    </tr>
+                </table>
+            </div>
+            <h1 class="top">Your information:</h1>
+            <table style="margin: auto; vertical-align: top;">
+                <tr>
+                    <td><label for="name" class="whitetext">Name:</label></td>
+                    <td><input type="text" id="name" name="name" cols="50" required/></td>
+                </tr>
+
+                <tr>
+                    <td><label for="phone" class="whitetext">Telephone #:</label></td>
+                    <td><input type="text" id="phone" name="phone" cols="50" required/></td>
+                </tr>
+
+                <tr>
+                    <td><label for="plate" class="whitetext">Liscense Plate#:</label></td>
+                    <td><input type="text" id="plate" name="plate" cols="50" required/></td>
+                </tr>
+
+                <tr>
+                    <td><label for="spotnumber" class="whitetext">Parking Spot#:</label></td>
+                    <td><input type="text" id="spotnumber" name="spotnumber" cols="50" required/></td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td><input type="submit" name="submitbutton" value="PURCHASE" onclick="processform()"/></td>
+                </tr>
+
+            </table>
+
+        </form>
+
+
+
+
+</main>
+<footer id="foot">
+    <div id="container">
+        <img id="antipiracy" src="images/anti-piracy.gif" width="125px"/>
+        <a href="http://www.mpaa.org/why-copyright-matters/" target="_blank">Video recording devices are strictly prohibited. Click here for anti-piracy laws.</a>
+    </div>
+    <div id="address">
+        <p class="whitetext">Rhinebeck Masterpiece Drive-In</p>
+        <p class="whitetext">3392 North Albany Post Road</p>
+        <p class="whitetext">Rhinebeck, NY 12572</p>
+    </div>
+</footer>
+
+<script>
+
+function processform()
+        {
+            
+            window.alert("Thank you for your purchase. It will be delivered to your car shortly.");
+            document.getElementById("menuboard").submit();
+
+
+        }
+</script>
+
+</body>
+</html>

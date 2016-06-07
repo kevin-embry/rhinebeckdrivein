@@ -1,0 +1,145 @@
+body {
+	width: 1000px;
+/*	height: 1300px;*/
+	margin: auto;
+	background-image: url("images/nightsky.jpg");
+	background-size: 100% 100%;
+
+	background-repeat: no-repeat;
+	overflow: scroll;
+    
+
+	/*border: 1px solid black;*/
+	}
+
+header {
+	height: 200px;
+	}
+	
+.menu ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #cdcdb1;
+	border: 1px solid black;
+	
+}
+
+.menu li {
+	float: left;
+	/*border-bottom: 1px solid black;
+	border-top: 1px solid black;*/
+}
+
+.menu li a {
+	display: block;
+	width: 130px;
+	font-size: 125%;
+	border-left: 1px solid black;
+	
+	color: black;
+	text-align: center;
+	padding: 5px;
+	text-decoration: none;	
+}
+
+.menu li a:hover {
+	background-color: #1010aa;
+	color: white;
+}
+
+.whitetext {
+	color: white;
+}
+
+.center {
+	text-align: center;
+}
+
+#new {
+	text-shadow: 2px 2px 8px #ffff00;
+
+}
+
+.top {
+	text-align: center;
+}
+
+.topleft {
+	width: 495px;
+	float: left;
+	text-align: center;
+	line-height: 75%;
+	
+}
+
+
+.topright {
+	
+	
+	float: right;
+	width: 495px;
+	text-align: center;
+}
+
+.botright {
+	width: 495px;
+}
+
+.botleft {
+	
+	text-align: center;
+	float: left;
+	width: 495px;
+	height: 300px;
+	margin-top: 50px;
+}
+
+
+
+#foot {
+	
+	
+	float: right;
+	width: 1000px;
+	height: 125px;
+	text-align: center;
+	font-size: 120%;
+}
+
+#container {
+	margin-top: 5px;
+	
+}
+
+#container img {
+	float: left;
+}
+
+#container a {
+	text-wrap: wrap;
+	text-decoration: none;
+	color: yellow;
+	font-size: 70%;
+	position: relative;
+	float: left;
+	width: 110px;
+	margin-top: 15px;
+}
+
+#address {
+	float: right;
+	text-align: center;
+	width: 300px;
+	line-height: 80%;
+	margin-right: 350px;
+	
+}
+/*#antipiracy {
+	float: left;
+	
+	
+	margin-top: 10px;
+}*/
+
